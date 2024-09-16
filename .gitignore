@@ -2,7 +2,7 @@
 /Assets/ERP
 /Assets/TextMesh Pro/*
 !/Assets/TextMesh Pro/Fonts
-.erp
+/.erp
 
 # This .gitignore file should be placed at the root of your Unity project directory
 #
