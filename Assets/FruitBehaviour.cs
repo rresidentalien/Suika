@@ -19,9 +19,8 @@ public class FruitBehaviour : MonoBehaviour
     {
         fruitTag = int.Parse(this.gameObject.tag);
 
-        this.gameObject.transform.localScale = new Vector3(1.25f*fruitTag, 1.25f*fruitTag, 1);
+        this.gameObject.transform.localScale = new Vector3(1.5f*fruitTag, 1.5f*fruitTag, 1);
         this.gameObject.GetComponent<SpriteRenderer>().color = colours[fruitTag-1];
-        Debug.Log(fruitTag);
     }
 
     //check if collision tag is equal to current tag, if so, convert current tag to integer and increment and then convert back
