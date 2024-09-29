@@ -13,6 +13,7 @@ public class SpawnerBehaviour : MonoBehaviour
     GameObject clone;
     float mouseX;
     float timer;
+    int shapeTag;
 
     // Start is called before the first frame update
     void Start()
@@ -34,11 +35,29 @@ public class SpawnerBehaviour : MonoBehaviour
                 clone.tag = Random.Range(1,5).ToString();
             }
 
+            shapeTag = int.Parse(clone.tag);
             mouseX = Camera.main.ScreenToWorldPoint(Input.mousePosition).x;
 
-            if (mouseX > -13 && mouseX < 13)
+            if (clone.tag == "1")
             {
-                clone.transform.position = new Vector3(mouseX, 23, 0);
+                if ((mouseX > -14.3) && (mouseX < 14.3))
+                {
+                    clone.transform.position = new Vector3(mouseX, 23, 0);
+                }
+            }
+            else if (clone.tag == "2")
+            {
+                if ((mouseX > -13.7) && (mouseX < 13.7))
+                {
+                    clone.transform.position = new Vector3(mouseX, 23, 0);
+                }
+            }
+            else
+            {
+                if ((mouseX > -13) && (mouseX < 13))
+                {
+                    clone.transform.position = new Vector3(mouseX, 23, 0);
+                }
             }
 
             if (Input.GetMouseButtonDown(0))
